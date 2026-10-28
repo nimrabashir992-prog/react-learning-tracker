@@ -4,3 +4,9 @@ Yes! ✅ You've understood it correctly.
 Local branch (main or master) = your Git history on your computer.
 
 origin = the nickname Git uses for your remote repository, usually your GitHub repository.
+
+=================================================
+git add .
+git commit -m "save progress"
+git push
+=================================================
