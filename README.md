@@ -1,16 +1,80 @@
-# React + Vite
+# React Learning Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React learning project where I practice core React concepts and gradually build an application as I progress in my web development journey.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View React Learning Tracker](https://react-learning-tracker.vercel.app/)
 
-## React Compiler
+## GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[View source code on GitHub](https://github.com/nimrabashir992-prog/react-learning-tracker)
 
-## Expanding the ESLint configuration
+## Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript (JSX)
+- Vite
+- CSS
+- Git and GitHub
+- Vercel
+
+## Current Version
+
+The initial version displays the project title and a short description. I will expand the application incrementally as I learn React fundamentals.
+
+## Getting Started
+
+To run the project locally:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/nimrabashir992-prog/react-learning-tracker.git
+   ```
+
+2. Open the project directory:
+
+   ```bash
+   cd react-learning-tracker
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL shown in your terminal.
+
+## Production Build
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+## Learning Goals
+
+- Build reusable React components
+- Understand props and component communication
+- Manage state with `useState`
+- Handle events and controlled forms
+- Render lists using `.map()`
+- Practice conditional rendering
+- Calculate progress from application state
+
+## Project Approach
+
+This project grows incrementally alongside my React learning. Each new feature is an opportunity to understand the concept, implement it, and see it working in the deployed application.
+
+---
+
+Created as part of my journey toward full-stack web development with React, TypeScript, Next.js, and AI-powered web applications.
