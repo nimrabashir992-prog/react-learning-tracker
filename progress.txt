@@ -1,0 +1,20 @@
+What we have completed
+1. Created a tasks array in App.jsx.
+2. Used .map() to display multiple tasks.
+3. Created a reusable TaskItem.jsx component.
+4. Passed task data from App to TaskItem using props. 
+================
+Next feature
+We'll add a controlled input to add new learning tasks.
+
+This will introduce:
+- useState
+- Input value
+- onChange
+- onClick   ***************
+Let's understand what we have achieved:
+- useState("") creates state.
+- value={newTask} connects the input to state.
+- onChange captures what the user types.
+- setNewTask() updates the state.
+

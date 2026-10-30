@@ -10,3 +10,13 @@ git add .
 git commit -m "save progress...."
 git push
 =================================================
+We need a way to store what the user types into an input field.
+React provides a Hook called useState for storing and updating component state.
+Connect state to an input
+A controlled input is an input whose value is controlled by React state.
+React provides the onClick event to handle button clicks.
+
+
+
+
+
