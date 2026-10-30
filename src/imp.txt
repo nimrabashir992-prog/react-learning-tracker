@@ -7,6 +7,6 @@ origin = the nickname Git uses for your remote repository, usually your GitHub r
 
 =================================================
 git add .
-git commit -m "save progress"
+git commit -m "save progress...."
 git push
 =================================================
