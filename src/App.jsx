@@ -1,5 +1,5 @@
 function App() {
-  const tasks = ["Learn React", "Learn TypeScript", "Learn Next.js"];
+  const tasks = ["Learn React.js", "Learn TypeScript", "Learn Next.js"];
   return (
     <div>
       <h1>React Learning Tracker</h1>
