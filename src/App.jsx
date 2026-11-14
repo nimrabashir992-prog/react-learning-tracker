@@ -3,10 +3,23 @@ import TaskItem from "./TaskItem";
 function App() {
   const [newTask, setNewTask] = useState("");
   const [completedTasks, setCompletedTasks] = useState([]);
+  const [completedSubtopics, setCompletedSubtopics] = useState([]);
   const [tasks, setTasks] = useState([
-    "Learn React.js",
-    "Learn TypeScript",
-    "Learn Next.js",
+    {
+      id: 1,
+      title: "React.js",
+      subtopics: ["Components", "Props", "useState"],
+    },
+    {
+      id: 2,
+      title: "TypeScript",
+      subtopics: ["Basic Types", "Interfaces"],
+    },
+    {
+      id: 3,
+      title: "Next.js",
+      subtopics: ["App Router", "Pages and Layouts"],
+    },
   ]);
   return (
     <div>
@@ -21,7 +34,14 @@ function App() {
         onClick={() => {
           if (newTask.trim() === "") return;
 
-          setTasks([...tasks, newTask]);
+          setTasks([
+            ...tasks,
+            {
+              id: Date.now(),
+              title: newTask.trim(),
+              subtopics: [],
+            },
+          ]);
           setNewTask("");
         }}
       >
@@ -32,16 +52,27 @@ function App() {
         {tasks.map((task) => (
           // <li key={task}>{task}</l>       instead of this, we create taskItem component and use it here
           <TaskItem
-            key={task}
-            task={task}
-            isCompleted={completedTasks.includes(task)}
-            onToggle={() => {
-              if (completedTasks.includes(task)) {
-                setCompletedTasks(
-                  completedTasks.filter((item) => item !== task),
+            key={task.id}
+            task={task.title}
+            subtopics={task.subtopics}
+            completedSubtopics={completedSubtopics}
+            onSubtopicToggle={(topic) => {
+              if (completedSubtopics.includes(topic)) {
+                setCompletedSubtopics(
+                  completedSubtopics.filter((item) => item !== topic),
                 );
               } else {
-                setCompletedTasks([...completedTasks, task]);
+                setCompletedSubtopics([...completedSubtopics, topic]);
+              }
+            }}
+            isCompleted={completedTasks.includes(task.title)}
+            onToggle={() => {
+              if (completedTasks.includes(task.title)) {
+                setCompletedTasks(
+                  completedTasks.filter((item) => item !== task.title),
+                );
+              } else {
+                setCompletedTasks([...completedTasks, task.title]);
               }
             }}
           />
