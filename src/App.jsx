@@ -1,3 +1,4 @@
+import "./App.css";
 import { useState } from "react";
 import TaskItem from "./TaskItem";
 function App() {
@@ -21,8 +22,18 @@ function App() {
       subtopics: ["App Router", "Pages and Layouts"],
     },
   ]);
+  const totalSubtopics = tasks.reduce(
+    (total, task) => total + task.subtopics.length,
+    0,
+  );
+  const completedSubtopicsCount = completedSubtopics.length;
+  const pendingSubtopicsCount = totalSubtopics - completedSubtopicsCount;
+  const progressPercentage =
+    totalSubtopics === 0
+      ? 0
+      : Math.round((completedSubtopicsCount / totalSubtopics) * 100);
   return (
-    <div>
+    <div className="app">
       <h1>React Learning Tracker</h1>
       <input
         type="text"
@@ -48,6 +59,32 @@ function App() {
         Add Task
       </button>
       <p>Track my progress as I learn React.</p>
+      <section className="dashboard">
+        <h2>Learning Progress Dashboard</h2>
+
+        <div className="stat-card">
+          <h3>Total Subtopics</h3>
+          <p>{totalSubtopics}</p>
+        </div>
+        <div className="stat-card">
+          <h3>Completed Subtopics</h3>
+          <p>{completedSubtopicsCount}</p>
+        </div>
+        <div className="stat-card">
+          <h3>Pending Subtopics</h3>
+          <p>{pendingSubtopicsCount}</p>
+        </div>
+        <div className="stat-card">
+          <h3>Overall Progress</h3>
+          <p>{progressPercentage}%</p>
+        </div>
+        <div className="progress-track">
+          <div
+            className="progress-fill"
+            style={{ width: `${progressPercentage}%` }}
+          />
+        </div>
+      </section>
       <ul>
         {tasks.map((task) => (
           // <li key={task}>{task}</l>       instead of this, we create taskItem component and use it here

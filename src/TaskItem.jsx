@@ -7,7 +7,7 @@ function TaskItem({
   onSubtopicToggle,
 }) {
   return (
-    <li>
+    <li className="task-item">
       <span
         onClick={onToggle}
         style={{
