@@ -58,7 +58,7 @@ function App() {
       >
         Add Task
       </button>
-      <p>Track my progress as I learn React.</p>
+      <p>Track my React learning journey and monitor my progress.</p>{" "}
       <section className="dashboard">
         <h2>Learning Progress Dashboard</h2>
 
